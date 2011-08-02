@@ -1,0 +1,11 @@
+Please see the "bin" directory for complete examples and all
+non-flash source code and supporting files for using Agile Uploader.
+
+You do not need to use any of these files if you wish to build
+your own JavaScript that uses Flash's ExternalInterface to work
+with the methods within the compiled SWF. You could then use
+the agile-uploader-3.0.js file as a reference. Note that this
+file uses jQuery, but you need not use jQuery if so desired.
+
+You can also refer to the Agile Uploader project page: 
+http://www.shift8creative.com/projects/agile-uploader/index.html

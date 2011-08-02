@@ -1,0 +1,56 @@
+html, body {
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	font-size: 62.5%;
+}
+
+p, label, li {
+	color: #222;
+	word-spacing: 0.15em;
+	text-align: left;
+	letter-spacing: 0;
+	line-height: 1.3em;
+	font-size: 1.3em;
+}
+
+h1 {
+	font-size: 2.2em;
+}
+
+.small, .small a, a.small_link {
+	font-size: 1.1em;
+	word-spacing: 0.1em;
+	color: #888;
+}
+
+label {
+	font-weight: bold;
+}
+
+input {
+	border: 1px solid #c2c2c2;
+}
+
+a {
+	color: #ff6400;	
+}
+
+a:hover {
+	color: #000;
+	border-bottom: 1px dashed #000;
+	text-decoration: none;
+}
+
+#demo {
+	width: 550px;
+	display: block;
+}
+
+li {
+	margin: 0px 0px 4px 0px;
+}
+li.demo_link {
+	font-size: 1.2em;
+}
