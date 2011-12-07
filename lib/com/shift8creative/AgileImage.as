@@ -171,22 +171,38 @@ package com.shift8creative {
 			var img:Bitmap = new Bitmap(theImage.bitmapData);
 			//trace('resize bitmap : ' + img.height + '-' + img.width);
 			//trace('resize bitmap : ' + rH + '-' + rW);
-			if (img.width > img.height) {
-					if (img.height>rH)
-						rH = img.height * (rW / img.width);
-					else{ // do not resize
-						rH = img.height;
-						rW = img.width;
-					}
+// 
+//			if (img.width > img.height) {
+//					if (img.height>rH)
+//						rH = img.height * (rW / img.width);
+//					else{ // do not resize
+//						rH = img.height;
+//						rW = img.width;
+//					}
+//			}
+//			else {
+//				if (img.width>rW)
+//					rW = img.width * (rH / img.height);
+//				else{ // do not resize
+//						rH = img.height;
+//						rW = img.width;
+//					}				
+//			}
+
+			// ---START NEW DIMENSION CHECK --- //
+			if ((img.height>rH) || (img.width>rW)) 
+			{
+				if(img.width > img.height) {
+				rH = img.height * (rW / img.width);
+				} else {
+				rW = img.width * (rH / img.height);
+				}
+			} else { // do not resize
+			rH = img.height;
+			rW = img.width;
 			}
-			else {
-				if (img.width>rW)
-					rW = img.width * (rH / img.height);
-				else{ // do not resize
-						rH = img.height;
-						rW = img.width;
-					}				
-			}			
+			//---END DIMENSION CHECK ---//
+
 			var bmpData:BitmapData = new BitmapData(rW, rH, transparent, fillColor);
 			var scaleMatrix:Matrix = new Matrix( rW / img.width , 0, 0, rH / img.height, 0,0);
 			var colorTransform:ColorTransform = new ColorTransform();
